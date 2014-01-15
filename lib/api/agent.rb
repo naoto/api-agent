@@ -7,13 +7,15 @@ module API
     require 'json'
     require 'nokogiri'
 
+    require 'api/agent/json'
+
     class << self
       def get(url, mode = :json)
         self.send(mode, url)
       end
 
       def json(url)
-        JSON.parse(open(url).read)
+        JSON.open(url)
       end
 
       def xml(url)

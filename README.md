@@ -19,7 +19,15 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-API::Agent.json("http://echo.jsontest.com/key/value")
+API::Agent.json("http://echo.jsontest.com/key/value") #=> {"key" => "value"}
+```
+
+or
+
+```ruby
+require 'api/agent/json'
+
+JSON.open("http://echo.jsontest.com/key/value") #=> {"key" => "value"}
 ```
 
 ## Contributing
